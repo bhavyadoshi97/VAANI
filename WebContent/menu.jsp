@@ -7,18 +7,7 @@
 		<a href="index.jsp">
 			<i class="ti-dashboard"></i>
 			<span>Dashboard</span> 
-			<!-- <span class="pull-right-container"> <i
-				class="fa fa-angle-right pull-right"></i>
-			</span> -->
 		</a>
-		<!-- <ul class="treeview-menu">
-			<li><a href="index.html"><i class="ti-more"></i>Main
-					Dashboard</a></li>
-			<li><a href="index-2.html"><i class="ti-more"></i>e-Commerce
-					Dashboard</a></li>
-			<li class="active"><a href="index-3.html"><i class="ti-more"></i>Analytics</a></li>
-			<li><a href="index-4.html"><i class="ti-more"></i>Hospital</a></li>
-		</ul> -->
 	</li>
 
 	<li class="treeview">
