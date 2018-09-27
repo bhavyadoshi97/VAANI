@@ -20,8 +20,9 @@
 		</a>
 		<ul class="treeview-menu">
 			<li><a href="disabledUser.jsp"><i class="ti-more"></i>Disability Card</a></li>
+			<li><a href="userManager.jsp"><i class="ti-more"></i>Manage User</a></li>
+			<li><a href="insertState.jsp"><i class="ti-more"></i>Insert State</a></li>
 			<li><a href="insertCity.jsp"><i class="ti-more"></i>Insert City</a></li>
-			<!-- <li><a href="pages/layout_collapsed_sidebar.html"><i class="ti-more"></i>Mini Sidebar</a></li> -->
 		</ul>
 	</li>
 </ul>

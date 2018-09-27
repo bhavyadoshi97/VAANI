@@ -10,7 +10,7 @@
 <meta name="author" content="">
 <link rel="icon" href="adminResources/images/favicon.ico">
 
-<title>VAANI Admin - Insert City</title>
+<title>VAANI Admin - User Manager</title>
 
 <!-- Bootstrap 4.0-->
 <link rel="stylesheet" href="adminResources/css/bootstrap.css">
@@ -24,6 +24,10 @@
 <!-- UltimatePro Admin skins -->
 <link rel="stylesheet" href="adminResources/css/_all-skins.css">
 
+<!-- Data Table-->
+<link rel="stylesheet" type="text/css"
+	href="adminResources/datatables.min.css" />
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -32,6 +36,7 @@
 	<![endif]-->
 
 </head>
+
 <body class="hold-transition skin-light light-sidebar sidebar-mini">
 	<div class="wrapper">
 
@@ -47,77 +52,93 @@
 			</section>
 		</aside>
 
+
+		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<div class="container">
 				<!-- Content Header (Page header) -->
 				<div class="content-header">
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
-							<h3 class="page-title">City Insertion</h3>
-							<!-- <div class="d-inline-block align-items-center">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item" aria-current="page">Forms</li>
-								<li class="breadcrumb-item active" aria-current="page">Form Validation</li>
-							</ol>
-						</nav>
-					</div> -->
+							<h3 class="page-title">User Details</h3>
 						</div>
 					</div>
 				</div>
 
 				<!-- Main content -->
 				<section class="content">
+					<div class="row">
 
-					<!-- Basic Forms -->
-					<div class="box">
-						<div class="box-header with-border">
-							<h4 class="box-title">State & City</h4>
-							<!-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="#">official website </a></h6> -->
-						</div>
-						<!-- /.box-header -->
-						<div class="box-body">
-							<div class="row">
-								<div class="col">
-									<form novalidate>
-										<div class="row">
-											<div class="col-12">
-												<div class="form-group">
-													<h5>Select State <span class="text-danger">*</span></h5>
-													<div class="controls">
-														<select name="select" id="select" required class="form-control">
-															<option value="">Select Your State</option>
-															<option value="1">India</option>
-															<option value="2">USA</option>
-															<option value="3">UK</option>
-															<option value="4">Canada</option>
-															<option value="5">Dubai</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<h5>Enter City <span class="text-danger">*</span></h5>
-													<div class="controls">
-														<input type="text" name="text" class="form-control" placeholder="City Name" required data-validation-required-message="This field is required"> 
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="text-xs-right">
-											<button type="submit" class="btn btn-info">Submit</button>
-					  					</div>
-									</form>
+						<div class="col-12">
+							<div class="box">
+								<div class="box-header">
+									<h4 class="box-title">List of Users</h4>
+								</div>
+								<div class="box-body">
+									<div class="table-responsive">
+										<table id="complex_header"
+											class="table table-bordered table-hover display nowrap margin-top-10 w-p100"
+											style="width: 100%">
+											<thead>
+												<tr>
+													<th rowspan="2">Name</th>
+													<th colspan="3">Information</th>
+													<th colspan="2">Action</th>
+												</tr>
+												<tr>
+													<th>Type</th>
+													<th>E-mail</th>
+													<th>Contact</th>
+													<th>Update</th>
+													<th>Delete</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Tiger Nixon</td>
+													<td>System Architect</td>
+													<td>a@b.c</td>
+													<td>1234567890</td>
+													<td><button type="button" class="btn btn-primary">Update</button></td>
+													<td><button type="button" class="btn btn-danger">Delete</button></td>
+												</tr>
+												<tr>
+													<td>Garrett Winters</td>
+													<td>Accountant</td>
+													<td>a@b.c</td>
+													<td>1234567890</td>
+													<td><button type="button" class="btn btn-primary">Update</button></td>
+													<td><button type="button" class="btn btn-danger">Delete</button></td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<th>Name</th>
+													<th>Type</th>
+													<th>E-mail</th>
+													<th>Contact</th>
+													<th>Update</th>
+													<th>Delete</th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- /.row -->
 				</section>
+				<!-- /.content -->
+
 			</div>
 		</div>
+		<!-- /.content-wrapper -->
+
 		<footer class="main-footer">
 			<jsp:include page="footer.jsp" />
 		</footer>
+		<!-- Control Sidebar -->
 	</div>
 	<!-- ./wrapper -->
 
@@ -142,9 +163,12 @@
 	<!-- UltimatePro Admin for demo purposes -->
 	<script src="adminResources/js/demo.js"></script>
 
-	<!-- Form validator JavaScript -->
-	<script src="adminResources/js/validation.js"></script>
-	<script src="adminResources/js/form-validation.js"></script>
+	<!-- This is data table -->
+	<script src="adminResources/js/datatables.min.js"></script>
+
+	<!-- UltimatePro Admin for Data Table -->
+	<script src="adminResources/js/data-table.js"></script>
+
 
 </body>
 </html>

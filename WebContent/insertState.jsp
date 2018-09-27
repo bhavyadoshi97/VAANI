@@ -10,7 +10,7 @@
 <meta name="author" content="">
 <link rel="icon" href="adminResources/images/favicon.ico">
 
-<title>VAANI Admin - Insert City</title>
+<title>VAANI Admin - Insert State</title>
 
 <!-- Bootstrap 4.0-->
 <link rel="stylesheet" href="adminResources/css/bootstrap.css">
@@ -36,7 +36,7 @@
 	<div class="wrapper">
 
 		<header class="main-header">
-			<jsp:include page="header.jsp" />
+			<jsp:include page="header.jsp" /> 
 		</header>
 
 		<!-- Left side column. contains the logo and sidebar -->
@@ -53,7 +53,7 @@
 				<div class="content-header">
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
-							<h3 class="page-title">City Insertion</h3>
+							<h3 class="page-title">State Insertion</h3>
 							<!-- <div class="d-inline-block align-items-center">
 						<nav>
 							<ol class="breadcrumb">
@@ -73,7 +73,7 @@
 					<!-- Basic Forms -->
 					<div class="box">
 						<div class="box-header with-border">
-							<h4 class="box-title">State & City</h4>
+							<h4 class="box-title">Enter State</h4>
 							<!-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="#">official website </a></h6> -->
 						</div>
 						<!-- /.box-header -->
@@ -84,29 +84,21 @@
 										<div class="row">
 											<div class="col-12">
 												<div class="form-group">
-													<h5>Select State <span class="text-danger">*</span></h5>
+													<h5>
+														State <span class="text-danger">*</span>
+													</h5>
 													<div class="controls">
-														<select name="select" id="select" required class="form-control">
-															<option value="">Select Your State</option>
-															<option value="1">India</option>
-															<option value="2">USA</option>
-															<option value="3">UK</option>
-															<option value="4">Canada</option>
-															<option value="5">Dubai</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<h5>Enter City <span class="text-danger">*</span></h5>
-													<div class="controls">
-														<input type="text" name="text" class="form-control" placeholder="City Name" required data-validation-required-message="This field is required"> 
+														<div class="input-group">
+															<input type="text" class="form-control"
+																placeholder="Name" required> <span
+																class="input-group-btn">
+																<button class="btn btn-info" type="submit">Go!</button>
+															</span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="text-xs-right">
-											<button type="submit" class="btn btn-info">Submit</button>
-					  					</div>
 									</form>
 								</div>
 							</div>
