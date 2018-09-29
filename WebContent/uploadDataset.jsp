@@ -10,15 +10,15 @@
 <meta name="author" content="">
 <!-- <link rel="icon" href="adminResources/images/favicon.ico"> -->
 
-<title>VAANI Admin - Insert City</title>
+<title>VAANI Admin - Upload Dataset</title>
 
 <!-- Bootstrap 4.0-->
-<link rel="stylesheet" href="adminResources/css/bootstrap.css">
+<link rel="stylesheet" href="adminResources/css/bootstrap.min.css">
 
 <!-- Bootstrap extend-->
 <link rel="stylesheet" href="adminResources/css/bootstrap-extend.css">
 
-<!-- theme style -->
+<!-- Theme style -->
 <link rel="stylesheet" href="adminResources/css/master_style.css">
 
 <!-- UltimatePro Admin skins -->
@@ -37,6 +37,7 @@
 
 		<header class="main-header">
 			<jsp:include page="header.jsp" />
+
 		</header>
 
 		<!-- Left side column. contains the logo and sidebar -->
@@ -47,22 +48,15 @@
 			</section>
 		</aside>
 
+
+		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<div class="container">
 				<!-- Content Header (Page header) -->
 				<div class="content-header">
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
-							<h3 class="page-title">City Insertion</h3>
-							<!-- <div class="d-inline-block align-items-center">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item" aria-current="page">Forms</li>
-								<li class="breadcrumb-item active" aria-current="page">Form Validation</li>
-							</ol>
-						</nav>
-					</div> -->
+							<h3 class="page-title">Upload Dataset</h3>
 						</div>
 					</div>
 				</div>
@@ -73,8 +67,7 @@
 					<!-- Basic Forms -->
 					<div class="box">
 						<div class="box-header with-border">
-							<h4 class="box-title">State & City</h4>
-							<!-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="#">official website </a></h6> -->
+							<h4 class="box-title">Dataset</h4>
 						</div>
 						<!-- /.box-header -->
 						<div class="box-body">
@@ -84,41 +77,48 @@
 										<div class="row">
 											<div class="col-12">
 												<div class="form-group">
-													<h5>Select State <span class="text-danger">*</span></h5>
+													<h5>
+														Enter Symbol <span class="text-danger">*</span>
+													</h5>
 													<div class="controls">
-														<select name="select" id="select" required class="form-control">
-															<option value="">Select Your State</option>
-															<option value="1">India</option>
-															<option value="2">USA</option>
-															<option value="3">UK</option>
-															<option value="4">Canada</option>
-															<option value="5">Dubai</option>
-														</select>
+														<input type="file" name="file" class="form-control"
+															required>
 													</div>
 												</div>
 												<div class="form-group">
-													<h5>Enter City <span class="text-danger">*</span></h5>
+													<h5>
+														Description <span class="text-danger">*</span>
+													</h5>
 													<div class="controls">
-														<input type="text" name="text" class="form-control" placeholder="City Name" required data-validation-required-message="This field is required"> 
+														<textarea name="textarea" id="textarea"
+															class="form-control" required placeholder="Enter Description of the Symbol"></textarea>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="text-xs-right">
-											<button type="submit" class="btn btn-info">Submit</button>
-					  					</div>
+											<button type="submit" class="btn btn-info">Upload</button>
+										</div>
 									</form>
 								</div>
+								<!-- /.col -->
 							</div>
+							<!-- /.row -->
 						</div>
+						<!-- /.box-body -->
 					</div>
+					<!-- /.box -->
 				</section>
+				<!-- /.content -->
 			</div>
 		</div>
-		<footer class="main-footer">
-			<jsp:include page="footer.jsp" />
-		</footer>
 	</div>
+	<!-- /.content-wrapper -->
+
+	<footer class="main-footer">
+		<jsp:include page="footer.jsp" />
+	</footer>
+
 	<!-- ./wrapper -->
 
 	<!-- jQuery 3 -->
@@ -128,10 +128,10 @@
 	<script src="adminResources/js/popper.min.js"></script>
 
 	<!-- Bootstrap 4.0-->
-	<script src="adminResources/js/bootstrap.js"></script>
+	<script src="adminResources/js/bootstrap.min.js"></script>
 
-	<!-- Slimscroll -->
-	<script src="adminResources/js/jquery.slimscroll.js"></script>
+	<!-- SlimScroll -->
+	<script src="adminResources/js/jquery.slimscroll.min.js"></script>
 
 	<!-- FastClick -->
 	<script src="adminResources/js/fastclick.js"></script>

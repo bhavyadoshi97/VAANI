@@ -23,6 +23,9 @@
 			<li><a href="userManager.jsp"><i class="ti-more"></i>Manage User</a></li>
 			<li><a href="insertState.jsp"><i class="ti-more"></i>Insert State</a></li>
 			<li><a href="insertCity.jsp"><i class="ti-more"></i>Insert City</a></li>
+			<li><a href="uploadDataset.jsp"><i class="ti-more"></i>Upload Dataset</a></li>
+			<li><a href="viewReport.jsp"><i class="ti-more"></i>View Report</a></li>
+			<li><a href="viewFeedback.jsp"><i class="ti-more"></i>View Feedback</a></li>
 		</ul>
 	</li>
 </ul>

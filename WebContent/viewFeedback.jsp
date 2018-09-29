@@ -10,19 +10,26 @@
 <meta name="author" content="">
 <!-- <link rel="icon" href="adminResources/images/favicon.ico"> -->
 
-<title>VAANI Admin - Insert City</title>
+<title>VAANI Admin - View Feedback</title>
 
 <!-- Bootstrap 4.0-->
-<link rel="stylesheet" href="adminResources/css/bootstrap.css">
+<link rel="stylesheet" href="adminResources/css/bootstrap.min.css">
 
 <!-- Bootstrap extend-->
 <link rel="stylesheet" href="adminResources/css/bootstrap-extend.css">
 
-<!-- theme style -->
+<!-- Theme style -->
 <link rel="stylesheet" href="adminResources/css/master_style.css">
 
 <!-- UltimatePro Admin skins -->
 <link rel="stylesheet" href="adminResources/css/_all-skins.css">
+
+<!-- c3 CSS -->
+<link rel="stylesheet" type="text/css"
+	href="adminResources/css/c3.min.css">
+
+<!-- daterange picker -->
+<link rel="stylesheet" href="adminResources/css/daterangepicker.css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,22 +54,15 @@
 			</section>
 		</aside>
 
+
+		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<div class="container">
 				<!-- Content Header (Page header) -->
 				<div class="content-header">
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
-							<h3 class="page-title">City Insertion</h3>
-							<!-- <div class="d-inline-block align-items-center">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item" aria-current="page">Forms</li>
-								<li class="breadcrumb-item active" aria-current="page">Form Validation</li>
-							</ol>
-						</nav>
-					</div> -->
+							<h3 class="page-title">View Feedback</h3>
 						</div>
 					</div>
 				</div>
@@ -73,8 +73,7 @@
 					<!-- Basic Forms -->
 					<div class="box">
 						<div class="box-header with-border">
-							<h4 class="box-title">State & City</h4>
-							<!-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="#">official website </a></h6> -->
+							<h4 class="box-title">Feedback</h4>
 						</div>
 						<!-- /.box-header -->
 						<div class="box-body">
@@ -84,41 +83,39 @@
 										<div class="row">
 											<div class="col-12">
 												<div class="form-group">
-													<h5>Select State <span class="text-danger">*</span></h5>
+													<h5>
+														Enter Duration <span class="text-danger">*</span>
+													</h5>
 													<div class="controls">
-														<select name="select" id="select" required class="form-control">
-															<option value="">Select Your State</option>
-															<option value="1">India</option>
-															<option value="2">USA</option>
-															<option value="3">UK</option>
-															<option value="4">Canada</option>
-															<option value="5">Dubai</option>
+														<select name="select" id="select" required
+															class="form-control">
+
+															<option value="5">For last week</option>
 														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<h5>Enter City <span class="text-danger">*</span></h5>
-													<div class="controls">
-														<input type="text" name="text" class="form-control" placeholder="City Name" required data-validation-required-message="This field is required"> 
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="text-xs-right">
-											<button type="submit" class="btn btn-info">Submit</button>
-					  					</div>
 									</form>
 								</div>
+								<!-- /.col -->
 							</div>
+							<!-- /.row -->
 						</div>
+						<!-- /.box-body -->
 					</div>
+					<!-- /.box -->
+
 				</section>
+				<!-- /.content -->
 			</div>
 		</div>
-		<footer class="main-footer">
-			<jsp:include page="footer.jsp" />
-		</footer>
+		<!-- /.content-wrapper -->
 	</div>
+	<footer class="main-footer">
+		<jsp:include page="footer.jsp" />
+	</footer>
+
 	<!-- ./wrapper -->
 
 	<!-- jQuery 3 -->
@@ -133,15 +130,32 @@
 	<!-- Slimscroll -->
 	<script src="adminResources/js/jquery.slimscroll.js"></script>
 
+	<!-- date-range-picker -->
+	<script src="adminResources/js/moment.min.js"></script>
+	<script src="adminResources/js/daterangepicker.js"></script>
+
+	<!-- Sparkline -->
+	<script src="adminResources/js/jquery.sparkline.min.js"></script>
+
+	<!-- C3 Plugins -->
+	<script src="adminResources/js/d3.min.js"></script>
+	<script src="adminResources/js/c3.min.js"></script>
+
+	<!-- eChart Plugins -->
+	<script src="adminResources/js/echarts-en.min.js"></script>
+
 	<!-- FastClick -->
 	<script src="adminResources/js/fastclick.js"></script>
 
 	<!-- UltimatePro Admin App -->
 	<script src="adminResources/js/template.js"></script>
 
+	<!-- UltimatePro Admin dashboard demo (This is only for demo purposes) -->
+	<script src="adminResources/js/dashboard3.js"></script>
+	<script src="adminResources/js/chart-dash3-int.js"></script>
+
 	<!-- UltimatePro Admin for demo purposes -->
 	<script src="adminResources/js/demo.js"></script>
-
 	<!-- Form validator JavaScript -->
 	<script src="adminResources/js/validation.js"></script>
 	<script src="adminResources/js/form-validation.js"></script>
