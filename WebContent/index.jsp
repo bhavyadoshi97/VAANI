@@ -111,7 +111,7 @@
 							  <div id="linearea3"></div>
 							  <div>
 								  <h3 class="countnm mb-5">%90</h3>
-								  <p class="mb-0"><i class="ion-ios-arrow-up text-success mr-10"></i>Yearly Sale</p>	  
+								  <p class="mb-0"><i class="ion-ios-arrow-up text-success mr-10"></i>Yearly Usage</p>	  
 							  </div>				
 						  </div>
 					  </div>
@@ -130,7 +130,7 @@
 					  </div>
 				  </div>
 			  </div>
-			  <div class="col-md-6 col-lg-3">
+			  <!-- <div class="col-md-6 col-lg-3">
 				  <div class="box">	
 					  <div class="box-body">
 						  <div class="flexbox">
@@ -142,7 +142,7 @@
 						  </div>
 					  </div>
 				  </div>
-			  </div>
+			  </div> -->
 
 		  </div>	
 			

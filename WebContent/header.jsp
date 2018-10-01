@@ -1,16 +1,21 @@
 <!-- Logo -->
 <a href="index.html" class="logo"> <!-- mini logo -->
 	<div class="logo-mini">
-		<span class="light-logo"><img
-			src="adminResources/images/logo-light.png" alt="logo"></span> <span
-			class="dark-logo"><img
-			src="adminResources/images/logo-dark.png" alt="logo"></span>
-	</div> <!-- logo-->
+		<!-- <span class="light-logo">
+			<img src="adminResources/images/logo-light.png" alt="logo">
+		</span> --> 
+		<span class="dark-logo">
+			<img src="adminResources/images/logo-dark_1.png" alt="">
+		</span>
+	</div> 
+<!-- logo-->
 	<div class="logo-lg">
-		<span class="light-logo"><img
-			src="adminResources/images/logo-light-text.png" alt="logo"></span> <span
-			class="dark-logo"><img
-			src="adminResources/images/logo-dark-text.png" alt="logo"></span>
+		<!-- <span class="light-logo">
+			<img src="adminResources/images/logo-light-text.png" alt="logo">
+		</span> -->
+		<span class="dark-logo">
+			<img src="adminResources/images/logo-dark-text_1.png" alt="VAANI Admin">
+		</span>
 	</div>
 </a>
 <!-- Header Navbar -->
