@@ -18,6 +18,17 @@ public class CityVO {
 	@Column(name="cityDescription")
 	private String cityDescription;
 	
+	@Column(name="deleteStatus")
+	private String deleteStatus;
+	
+	public String getDeleteStatus() {
+		return deleteStatus;
+	}
+
+	public void setDeleteStatus(String deleteStatus) {
+		this.deleteStatus = deleteStatus;
+	}
+
 	@ManyToOne 
 	StateVO s1;
 

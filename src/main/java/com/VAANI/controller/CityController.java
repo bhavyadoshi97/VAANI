@@ -35,6 +35,7 @@ public class CityController {
 	@RequestMapping(value="/insertCity.html")
 	public ModelAndView insertCity(CityVO cityVO)
 	{
+		cityVO.setDeleteStatus("active");
 		this.cityService.insertCity(cityVO);
 		return new ModelAndView("redirect:/viewCity.html");
 	}

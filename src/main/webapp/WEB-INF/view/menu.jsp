@@ -106,6 +106,7 @@
 		</a>
 		<ul class="treeview-menu">
 			<li><a href="addQuestion.html"><i class="ti-more"></i>Add Question</a></li>
+			<li><a href="viewQuestion.html"><i class="ti-more"></i>View Question</a></li>
 		</ul>
 	</li>
 	<li class="treeview">

@@ -41,7 +41,7 @@ public class CityDAOImp implements CityDAO{
 			
 			Transaction transaction=session.beginTransaction();
 			
-			Query q=session.createQuery("from CityVO");
+			Query q=session.createQuery("from CityVO where deleteStatus='active'");
 			
 			ls=q.list();
 			
@@ -106,7 +106,9 @@ public class CityDAOImp implements CityDAO{
 			
 			Transaction transaction=session.beginTransaction();
 			
-			session.delete(cityVO3);
+			Query q=session.createQuery("update CityVO set deleteStatus='inactive' where cityId='"+cityVO3.getCityId()+"'");
+			
+			q.executeUpdate();
 			
 			transaction.commit();
 			

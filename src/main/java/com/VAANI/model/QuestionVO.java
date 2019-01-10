@@ -23,6 +23,17 @@ public class QuestionVO {
 	@Column(name="questionDescription")
 	private String questionDescription;
 
+	@Column(name="deleteStatus")
+	private String deleteStatus;
+	
+	public String getDeleteStatus() {
+		return deleteStatus;
+	}
+
+	public void setDeleteStatus(String deleteStatus) {
+		this.deleteStatus = deleteStatus;
+	}
+
 	public int getQuestionId() {
 		return questionId;
 	}
