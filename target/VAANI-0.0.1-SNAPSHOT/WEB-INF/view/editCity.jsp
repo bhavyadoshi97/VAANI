@@ -84,6 +84,7 @@
 								<div class="col">
 									<form:form novalidate="novalidate" action="updateCity.html" modelAttribute="editcityData">
 									<form:hidden path="cityId"/>
+									<form:hidden path="deleteStatus"/>
 										<div class="row">
 											<div class="col-12">
 												<div class="form-group">

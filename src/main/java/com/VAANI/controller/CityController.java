@@ -41,7 +41,7 @@ public class CityController {
 	}
 	
 	@RequestMapping(value="/viewCity.html")
-	public ModelAndView loadviewCity(HttpServletRequest request)
+	public ModelAndView loadviewCity()
 	{
 		List viewCityList=new ArrayList();
 		viewCityList=this.cityService.viewCity();

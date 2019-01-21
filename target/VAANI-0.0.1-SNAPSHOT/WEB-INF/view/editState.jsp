@@ -82,7 +82,8 @@
 							<div class="row">
 								<div class="col">
 									<form:form novalidate="novalidate" action="updateState.html" method="post" modelAttribute="editData">
-										<form:hidden path="stateId" value="${i.stateId}"/>
+										<form:hidden path="stateId"/>
+										<form:hidden path="deleteStatus"/>
 										<div class="row">
 											<div class="col-12">
 												<div class="form-group">

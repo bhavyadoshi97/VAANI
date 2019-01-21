@@ -58,6 +58,7 @@
 		</a>
 		<ul class="treeview-menu">
 			<li><a href="addDisabledUser.html"><i class="ti-more"></i>Enter Details</a></li>
+			<li><a href="viewDisabledUser.html"><i class="ti-more"></i>View Disabled Users</a></li>
 		</ul>
 	</li>
 	<li class="treeview">

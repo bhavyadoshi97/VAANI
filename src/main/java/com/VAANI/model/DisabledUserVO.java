@@ -29,6 +29,9 @@ public class DisabledUserVO {
 	@Column(name="dateOfExpiry")
 	private String dateOfExpiry;
 	
+	@Column(name="deleteStatus")
+	private String deleteStatus;
+	
 	public int getDisabledUserId() {
 		return disabledUserId;
 	}
@@ -83,6 +86,14 @@ public class DisabledUserVO {
 
 	public void setDateOfExpiry(String dateOfExpiry) {
 		this.dateOfExpiry = dateOfExpiry;
+	}
+
+	public String getDeleteStatus() {
+		return deleteStatus;
+	}
+
+	public void setDeleteStatus(String deleteStatus) {
+		this.deleteStatus = deleteStatus;
 	}
 
 }
