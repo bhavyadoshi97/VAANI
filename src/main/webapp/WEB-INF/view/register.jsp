@@ -31,6 +31,25 @@
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	
+	<script>
+		function passmatch(){
+			var pass=document.getElementById("pass")
+			var pass2=document.getElementById("pass2")
+			var validate=document.getElementById("passvalidate")
+			var subbtn=document.getElementById("subbtn")
+			subbtn.disabled=true
+			if(pass.value!=pass2.value)
+				{
+					validate.style.display=""
+				}
+			else
+				{
+					validate.style.display="none"
+					subbtn.disabled=false
+				}
+		}
+	</script>
 
 </head>
 <body class="hold-transition bg-img"
@@ -57,13 +76,14 @@
 						<span class="ion ion-email form-control-feedback "></span>
 					</div>
 					<div class="form-group has-feedback controls">
-						<form:input type="password" name="password" class="form-control" placeholder="Password" required="required" data-validation-required-message="This field is required" path="pwd"/>
-						<span class="ion ion-locked form-control-feedback "></span>
+						<form:input type="password" name="password" class="form-control" id="pass" placeholder="Password" required="required" data-validation-required-message="This field is required" path="pwd"/>
+						<span class="ion ion-locked form-control-feedback "></span><br/>
 					</div>
 					<div class="form-group has-feedback controls">
-						<input type="password" name="password2" class="form-control"
+						<input type="password" name="password2" class="form-control" id="pass2" onkeyup="passmatch()"
 							placeholder="Retype password" required="required" data-validation-match-match="password" /> 
 							<span class="ion ion-log-in form-control-feedback "></span>
+							<span style="display:none;font-color:red" id="passvalidate">Password doesn't match!!</span>
 					</div>
 					<div class="row">
 						<div class="col-12">
@@ -75,7 +95,7 @@
 						</div>
 						<!-- /.col -->
 						<div class="col-12 text-center">
-							<button type="submit" class="btn btn-block mt-10 btn-success">SIGN
+							<button type="submit" class="btn btn-block mt-10 btn-success" id="subbtn">SIGN
 								UP</button>
 						</div>
 						<!-- /.col -->
