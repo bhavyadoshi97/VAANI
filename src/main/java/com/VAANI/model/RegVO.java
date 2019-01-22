@@ -1,66 +1,55 @@
 package com.VAANI.model;
 
 import javax.persistence.*;
-
+import com.VAANI.model.LoginVO;
 @Entity
 
-@Table(name="register1")
+@Table(name="registration")
 
 public class RegVO
 	{
 		@Id
 		@GeneratedValue(strategy=GenerationType.AUTO)
-		@Column(name="id")
-		private int id;
+		@Column(name="registrationId")
+		private int registrationId;
 		
-		@Column(name="name")
-		private String name;
+		@Column(name="orgName")
+		private String organisationName;
 		
-		@Column(name="email")
-		private String email;
+		@ManyToOne
+		LoginVO loginVO;
+
+
+		public int getRegistrationId() {
+			return registrationId;
+		}
+
+
+		public String getOrganisationName() {
+			return organisationName;
+		}
+
+
+		public void setOrganisationName(String organisationName) {
+			this.organisationName = organisationName;
+		}
+
+
+		public LoginVO getLoginVO() {
+			return loginVO;
+		}
+
+
+		public void setLoginVO(LoginVO loginVO) {
+			this.loginVO = loginVO;
+		}
+
+
+		public void setRegistrationId(int registrationId) {
+			this.registrationId = registrationId;
+		}
+
+
 		
-		
-		@Column(name="pwd")
-		private String pwd;
 
-
-		public int getId() {
-			return id;
-		}
-
-
-		public void setId(int id) {
-			this.id = id;
-		}
-
-
-		public String getName() {
-			return name;
-		}
-
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-
-		public String getEmail() {
-			return email;
-		}
-
-
-		public void setEmail(String email) {
-			this.email = email;
-		}
-
-
-		public String getPwd() {
-			return pwd;
-		}
-
-
-		public void setPwd(String pwd) {
-			this.pwd = pwd;
-		}
-		
-	}
+}

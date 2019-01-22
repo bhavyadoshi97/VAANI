@@ -68,15 +68,15 @@
 				<form:form action="insertData.html" method="post" class="form-element" modelAttribute="regData">
 					<div class="form-group has-feedback controls">
 						<form:input type="text" name="text" class="form-control"
-							placeholder="Name of Organisation" required="required" data-validation-required-message="This field is required" path="name"/> 
+							placeholder="Name of Organisation" required="required" data-validation-required-message="This field is required" path="organisationName"/> 
 							<span class="ion ion-person form-control-feedback "></span>
 					</div>
 					<div class="form-group has-feedback controls">
-						<form:input type="email" name="email" class="form-control" placeholder="Email" required="required" data-validation-required-message="This field is required" path="email"/>
+						<form:input type="email" name="email" class="form-control" placeholder="Email" required="required" data-validation-required-message="This field is required" path="loginVO.username"/>
 						<span class="ion ion-email form-control-feedback "></span>
 					</div>
 					<div class="form-group has-feedback controls">
-						<form:input type="password" name="password" class="form-control" id="pass" placeholder="Password" required="required" data-validation-required-message="This field is required" path="pwd"/>
+						<form:input type="password" name="password" class="form-control" id="pass" placeholder="Password" required="required" data-validation-required-message="This field is required" path="loginVO.password"/>
 						<span class="ion ion-locked form-control-feedback "></span><br/>
 					</div>
 					<div class="form-group has-feedback controls">
