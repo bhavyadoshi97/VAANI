@@ -33,22 +33,41 @@
 	<![endif]-->
 	
 	<script>
-		function passmatch(){
-			var pass=document.getElementById("pass")
-			var pass2=document.getElementById("pass2")
-			var validate=document.getElementById("passvalidate")
-			var subbtn=document.getElementById("subbtn")
-			subbtn.disabled=true
-			if(pass.value!=pass2.value)
-				{
-					validate.style.display=""
-				}
-			else
-				{
-					validate.style.display="none"
-					subbtn.disabled=false
-				}
+	function validatedata(){
+		var pass=document.getElementById("pass")
+		var pass2=document.getElementById("pass2")
+		var chkbox=document.getElementById("basic_checkbox_1")
+		var subbtn=document.getElementById("subbtn")
+		var matchpass=document.getElementById("passmatch")
+		if(pass.value==pass2.value && chkbox.checked)
+			{
+				matchpass.style.display="none"
+				subbtn.disabled=false
+			}
+		else if(pass.value==pass2.value && !chkbox.checked)
+			{
+				matchpass.style.display="none"
+				subbtn.disabled=true
+			}
+		else
+			{
+				matchpass.style.display=""
+				subbtn.disabled=true
+			}
+	}
+	function checkusername(){
+		var username=document.getElementById("email")
+		var htp=new XMLHttpRequest();
+		htp.onreadystatechange=function()
+		{
+			if(htp.readyState==4)
+			{
+				alert(htp.responseText)
+			}
 		}
+		htp.open("POST","checkUser.html?username="+username.value+",true)
+		htp.send();
+	}
 	</script>
 
 </head>
@@ -72,7 +91,7 @@
 							<span class="ion ion-person form-control-feedback "></span>
 					</div>
 					<div class="form-group has-feedback controls">
-						<form:input type="email" name="email" class="form-control" placeholder="Email" required="required" data-validation-required-message="This field is required" path="loginVO.username"/>
+						<form:input type="email" id="email" class="form-control" placeholder="Email" required="required" data-validation-required-message="This field is required" path="loginVO.username"/>
 						<span class="ion ion-email form-control-feedback "></span>
 					</div>
 					<div class="form-group has-feedback controls">
@@ -80,22 +99,22 @@
 						<span class="ion ion-locked form-control-feedback "></span><br/>
 					</div>
 					<div class="form-group has-feedback controls">
-						<input type="password" name="password2" class="form-control" id="pass2" onkeyup="passmatch()"
+						<input type="password" name="password2" class="form-control" id="pass2" onkeyup="validatedata()"
 							placeholder="Retype password" required="required" data-validation-match-match="password" /> 
 							<span class="ion ion-log-in form-control-feedback "></span>
-							<span style="display:none;font-color:red" id="passvalidate">Password doesn't match!!</span>
+							<span style="display:none;font-color:red" id="passmatch">Password doesn't match!!</span>
 					</div>
 					<div class="row">
 						<div class="col-12">
 							<div class="checkbox">
-								<input type="checkbox" id="basic_checkbox_1"> <label
+								<input type="checkbox" id="basic_checkbox_1" onclick="validatedata()"> <label
 									for="basic_checkbox_1">I agree to the <a href="#"
 									class="text-danger"><b>Terms</b></a></label>
 							</div>
 						</div>
 						<!-- /.col -->
 						<div class="col-12 text-center">
-							<button type="submit" class="btn btn-block mt-10 btn-success" id="subbtn">SIGN
+							<button type="submit" class="btn btn-block mt-10 btn-success" onclick="checkusername()" id="subbtn" disabled=true>SIGN
 								UP</button>
 						</div>
 						<!-- /.col -->

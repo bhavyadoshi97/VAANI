@@ -1,13 +1,18 @@
 package com.VAANI.controller;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.VAANI.model.*;
-import com.VAANI.service.*;
+import com.VAANI.model.LoginVO;
+import com.VAANI.model.RegVO;
+import com.VAANI.service.LoginService;
+import com.VAANI.service.RegService;
 
 @Controller
 public class RegController
@@ -36,6 +41,25 @@ public class RegController
     	public ModelAndView loadHome()
     	{
     		return new ModelAndView("home");
+    	}
+    	
+    	@RequestMapping(value="checkUser.html",method=RequestMethod.POST)
+    	public String checkUser(@RequestParam("username") String checkuser,LoginVO loginVO)
+    	{
+    		loginVO.setUsername(checkuser);
+    		List<LoginVO> checkUserLs=this.loginService.checkUser(loginVO);
+    		String response="";
+    		if(checkUserLs!=null)
+    		{
+    			System.out.print("Username already exist");
+    			response="Username already exist";
+    		}
+    		else
+    		{
+    			System.out.print("Username not found");
+    			response="Username not found";
+    		}
+    		return response;
     	}
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET, headers = "Accept=application/json")

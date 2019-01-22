@@ -14,8 +14,7 @@ public class LoginVO
 		private int loginId;
 		
 		@Column(name="username")
-		private String username;
-		
+		private String username;		
 		
 		@Column(name="password")
 		private String password;
