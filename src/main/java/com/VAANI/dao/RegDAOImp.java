@@ -14,7 +14,7 @@ public class RegDAOImp implements RegDAO
 		@Autowired
 		SessionFactory sessionFactory;
 		
-		public void insert(RegVO regVO)
+		public void insertRegister(RegVO regVO)
 			{
 				try
 					{

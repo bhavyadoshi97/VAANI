@@ -15,6 +15,9 @@ public class RegController
     	@Autowired
 		RegService regService;
     	
+    	@Autowired
+    	LoginService loginService;
+    	
     	@RequestMapping(value="/loadRegister1.html",method=RequestMethod.GET)
     	public ModelAndView loadRegister1()
     		{
@@ -24,7 +27,8 @@ public class RegController
     	@RequestMapping(value="insertData.html",method=RequestMethod.POST)
     	public ModelAndView insertData(@ModelAttribute RegVO regVO)
     		{	
-    			this.regService.insert(regVO);
+    			this.loginService.loginInsert(regVO.getLoginVO());
+    			this.regService.insertRegister(regVO);
     			
     			return new ModelAndView("redirect:/index");
     		}

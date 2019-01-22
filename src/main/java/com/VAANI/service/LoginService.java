@@ -9,15 +9,12 @@ import com.VAANI.dao.*;
 import com.VAANI.model.*;
 
 @Service
-public class RegService {
+public class LoginService {
 	
 	@Autowired
-	RegDAO regDAO;
+	LoginDAO loginDAO;
 	
-	@Transactional
-	public void insertRegister(RegVO regVO){
-		regDAO.insertRegister(regVO);
+	public void loginInsert(LoginVO loginVO){
+		this.loginDAO.insertLogin(loginVO);
 	}
-	
-
 }
