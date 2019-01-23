@@ -1,4 +1,5 @@
 package com.VAANI.controller;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,22 +45,23 @@ public class RegController
     	}
     	
     	@RequestMapping(value="checkUser.html",method=RequestMethod.POST)
-    	public String checkUser(@RequestParam("username") String checkuser,LoginVO loginVO)
+    	public ModelAndView checkUser(@RequestParam("username") String checkuser,LoginVO loginVO)
     	{
     		loginVO.setUsername(checkuser);
-    		List<LoginVO> checkUserLs=this.loginService.checkUser(loginVO);
-    		String response="";
-    		if(checkUserLs!=null)
+    		List<LoginVO> checkUserLs=new ArrayList<LoginVO>();
+    		checkUserLs=this.loginService.checkUser(loginVO);
+    		String reply;
+    		if(!(checkUserLs.isEmpty()))
     		{
     			System.out.print("Username already exist");
-    			response="Username already exist";
+    			reply="Username already exist";
     		}
     		else
     		{
     			System.out.print("Username not found");
-    			response="Username not found";
+    			reply="Username not found";
     		}
-    		return response;
+    		return new ModelAndView("checkUsername","response",reply);
     	}
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET, headers = "Accept=application/json")
