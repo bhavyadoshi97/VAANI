@@ -50,16 +50,16 @@ public class RegController
     		loginVO.setUsername(checkuser);
     		List<LoginVO> checkUserLs=new ArrayList<LoginVO>();
     		checkUserLs=this.loginService.checkUser(loginVO);
-    		String reply;
-    		if(!(checkUserLs.isEmpty()))
+    		Boolean reply;
+    		if(checkUserLs.isEmpty())
     		{
-    			System.out.print("Username already exist");
-    			reply="Username already exist";
+    			System.out.print("Username not found");
+    			reply=true;
     		}
     		else
     		{
-    			System.out.print("Username not found");
-    			reply="Username not found";
+    			System.out.print("Username already exist!!");
+    			reply=false;
     		}
     		return new ModelAndView("checkUsername","response",reply);
     	}

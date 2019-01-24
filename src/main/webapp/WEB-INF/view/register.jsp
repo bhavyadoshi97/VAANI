@@ -65,7 +65,7 @@
 			{
 				var x=htp.responseText
 				var check=x.trim()
-				if(check=="Username already exist")
+				if(check=="false")
 					{
 						msg.style.display=""
 						username.value=""
@@ -127,7 +127,7 @@
 						</div>
 						<!-- /.col -->
 						<div class="col-12 text-center">
-							<button type="submit" class="btn btn-block mt-10 btn-success" id="subbtn" disabled=true>SIGN
+							<button type="submit" class="btn btn-block mt-10 btn-success" id="subbtn" disabled=TRUE>SIGN
 								UP</button>
 						</div>
 						<!-- /.col -->
