@@ -39,42 +39,43 @@
 	<div class="auth-2-outer row align-items-center h-p100 m-0">
 		<div class="auth-2">
 			<div class="auth-logo font-size-30">
-				<a href="index.html" class="text-dark"><b>VAANI</b>Admin</a>
+				<a href="#" class="text-dark"><b>VAANI</b>Admin</a>
 			</div>
 			<!-- /.login-logo -->
 			<div class="auth-body">
 				<p class="auth-msg">Sign in to start your session</p>
 
-				<form action="../index.html" method="post" class="form-element">
+				<form action="j_spring_security_check" method="post" class="form-element">
 					<div class="form-group has-feedback">
-						<input type="email" class="form-control" placeholder="Email">
+						<input type="text" class="form-control" placeholder="Email" name="username">
 						<span class="ion ion-email form-control-feedback"></span>
 					</div>
 					<div class="form-group has-feedback">
-						<input type="password" class="form-control" placeholder="Password">
+						<input type="password" class="form-control" placeholder="Password" name="password">
 						<span class="ion ion-locked form-control-feedback"></span>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<!-- <div class="col-6">
 							<div class="checkbox">
 								<input type="checkbox" id="basic_checkbox_1"> <label
 									for="basic_checkbox_1">Remember Me</label>
 							</div>
 						</div>
-						<!-- /.col -->
+						/.col
 						<div class="col-6">
 							<div class="fog-pwd">
 								<a href="javascript:void(0)" class="text-dark"><i
 									class="ion ion-locked"></i> Forgot password?</a><br>
 							</div>
-						</div>
+						</div> -->
 						<!-- /.col -->
 						<div class="col-12 text-center">
-							<button type="submit" class="btn btn-block mt-10 btn-success">SIGN
+							<button type="submit" class="btn btn-block mt-10 btn-success" value="login">SIGN
 								IN</button>
 						</div>
 						<!-- /.col -->
 					</div>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 				</form>
 
 				<!-- <div class="text-center text-dark">
@@ -91,7 +92,7 @@
 
 				<div class="margin-top-30 text-center">
 					<p>
-						Don't have an account? <a href="auth_register2.html"
+						Don't have an account? <a href="loadRegister1.html"
 							class="text-info m-l-5">Sign Up</a>
 					</p>
 				</div>
@@ -110,6 +111,6 @@
 
 	<!-- Bootstrap 4.0-->
 	<script src="adminResources/js/bootstrap.js"></script>
-
+	
 </body>
 </html>

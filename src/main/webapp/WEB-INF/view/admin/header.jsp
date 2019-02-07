@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 
 <!-- Logo -->
-<a href="#" class="logo"> <!-- mini logo -->
+<a href="index.jsp" class="logo"> <!-- mini logo -->
 	<div class="logo-mini">
 		<!-- <span class="light-logo">
 			<img src="../adminResources/images/logo-light.png" alt="logo">
@@ -77,11 +77,11 @@
 							Account Setting</a> -->
 						<div class="dropdown-divider"></div> <a class="dropdown-item"
 						href="logout"><i class="ion-log-out"></i> Logout</a>
-						<!-- <div class="dropdown-divider"></div>
+						<div class="dropdown-divider"></div>
 						<div class="p-10">
 							<a href="javascript:void(0)"
 								class="btn btn-sm btn-rounded btn-success">View Profile</a>
-						</div> --></li>
+						</div></li>
 				</ul></li>
 		</ul>
 	</div>

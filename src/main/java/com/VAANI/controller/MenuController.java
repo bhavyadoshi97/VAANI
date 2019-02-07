@@ -8,39 +8,39 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MenuController {
 	
-	@RequestMapping(value="/home.html")
+	@RequestMapping(value="/admin/index.html")
 	public ModelAndView loadHome()
 	{
-		return new ModelAndView("home");
+		return new ModelAndView("admin/index");
 	}
 	
-	@RequestMapping(value="/viewReport.html")
+	@RequestMapping(value="/admin/viewReport.html")
 	public ModelAndView loadviewReport()
 	{
-		return new ModelAndView("viewReport");
+		return new ModelAndView("admin/viewReport");
 	}
 	
-	@RequestMapping(value="/userManager.html",method=RequestMethod.GET)
+	@RequestMapping(value="/admin/userManager.html",method=RequestMethod.GET)
 	public ModelAndView loaduserManager()
 	{
-		return new ModelAndView("userManager");
+		return new ModelAndView("admin/userManager");
 	}
 	
-	@RequestMapping(value="/uploadDataset.html")
+	@RequestMapping(value="/admin/uploadDataset.html")
 	public ModelAndView loaduploadDataset()
 	{
-		return new ModelAndView("uploadDataset");
+		return new ModelAndView("admin/uploadDataset");
 	}
 	
-	@RequestMapping(value="/viewFeedback.html")
+	@RequestMapping(value="/admin/viewFeedback.html")
 	public ModelAndView loadviewFeedback()
 	{
-		return new ModelAndView("viewFeedback");
+		return new ModelAndView("admin/viewFeedback");
 	}
 	
-	@RequestMapping(value="/outputScreen.html")
+	@RequestMapping(value="/admin/outputScreen.html")
 	public ModelAndView loadoutputScreen()
 	{
-		return new ModelAndView("outputScreen");
+		return new ModelAndView("admin/outputScreen");
 	}
 }

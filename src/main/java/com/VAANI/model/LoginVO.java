@@ -19,8 +19,8 @@ public class LoginVO
 		@Column(name="password")
 		private String password;
 		
-		@Column(name="enable")
-		private int enable;
+		@Column(name="enabled")
+		private int enabled;
 		
 		@Column(name="role")
 		private String role;
@@ -49,12 +49,12 @@ public class LoginVO
 			this.password = password;
 		}
 
-		public int getEnable() {
-			return enable;
+		public int getEnabled() {
+			return enabled;
 		}
 
-		public void setEnable(int enable) {
-			this.enable = enable;
+		public void setEnabled(int enabled) {
+			this.enabled = enabled;
 		}
 
 		public String getRole() {

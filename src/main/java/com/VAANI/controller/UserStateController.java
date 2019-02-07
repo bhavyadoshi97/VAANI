@@ -1,4 +1,5 @@
 package com.VAANI.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,56 +10,56 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.VAANI.model.*;
-import com.VAANI.service.*;
-
-
+import com.VAANI.model.StateVO;
+import com.VAANI.service.StateService;
 
 @Controller
-public class StateController {
+public class UserStateController {
+	
 	@Autowired
 	StateService stateService;
 	
-	@RequestMapping(value="/admin/addState.html")
+	@RequestMapping(value="/user/addState.html")
 	public ModelAndView loadaddState()
 	{
-		return new ModelAndView("admin/addState","stateData",new StateVO());
+		return new ModelAndView("user/addState","stateData",new StateVO());
 	}
 	
-	@RequestMapping(value="/admin/insertState.html",method=RequestMethod.POST)
+	@RequestMapping(value="/user/insertState.html",method=RequestMethod.POST)
 	public ModelAndView insertState(@ModelAttribute StateVO stateVO)
 	{
 		this.stateService.insertState(stateVO);
-		return new ModelAndView("redirect:/admin/viewState.html");
+		return new ModelAndView("redirect:/user/viewState.html");
 	}
 	
-	@RequestMapping(value="/admin/viewState.html")
+	@RequestMapping(value="/user/viewState.html")
 	public ModelAndView loadviewState()
 	{
 		List viewStateList=this.stateService.viewState();
-		return new ModelAndView("admin/viewState","statelist",viewStateList);
+		return new ModelAndView("user/viewState","statelist",viewStateList);
 	}
 	
-	@RequestMapping(value="/admin/editState.html")
+	@RequestMapping(value="/user/editState.html")
 	public ModelAndView loadeditState(@RequestParam("editStateId") int editStateId,StateVO stateVO1)
 	{
 		stateVO1.setStateId(editStateId);
 		List editStateList=this.stateService.edit(stateVO1);
-		return new ModelAndView("admin/editState","editData",(StateVO)editStateList.get(0));
+		return new ModelAndView("user/editState","editData",(StateVO)editStateList.get(0));
 	}
 	
-	@RequestMapping(value="/admin/updateState.html")
+	@RequestMapping(value="/user/updateState.html")
 	public ModelAndView updateState(@ModelAttribute("editData") StateVO stateVO2)
 	{
 		this.stateService.update(stateVO2);
-		return new ModelAndView("redirect:/admin/viewState.html");
+		return new ModelAndView("redirect:/user/viewState.html");
 	}
 	
-	@RequestMapping(value="/admin/deleteState.html")
+	@RequestMapping(value="/user/deleteState.html")
 	public ModelAndView deleteState(@RequestParam("deleteStateId") int deleteStateId, StateVO stateVO3)
 	{
 		stateVO3.setStateId(deleteStateId);
 		this.stateService.delete(stateVO3);
-		return new ModelAndView("redirect:/admin/viewState.html");
+		return new ModelAndView("redirect:/user/viewState.html");
 	}
+
 }

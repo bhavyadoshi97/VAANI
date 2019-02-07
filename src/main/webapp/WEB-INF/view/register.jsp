@@ -96,7 +96,7 @@
 			<div class="auth-body">
 				<p class="auth-msg">Register a new Organisation</p>
 
-				<form:form action="insertData.html" method="post" class="form-element" modelAttribute="regData">
+				<form:form action="/insertData.html" method="post" class="form-element" modelAttribute="regData">
 					<div class="form-group has-feedback controls">
 						<form:input type="text" name="text" class="form-control"
 							placeholder="Name of Organisation" required="required" data-validation-required-message="This field is required" path="organisationName"/> 
@@ -148,7 +148,7 @@
 
 				<div class="margin-top-30 text-center">
 					<p>
-						Already have an account? <a href="auth_login2.html"
+						Already have an account? <a href="login.html"
 							class="text-info m-l-5">Sign In</a>
 					</p>
 				</div>
