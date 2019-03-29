@@ -67,14 +67,33 @@
 						</div>
 					</div>
 				</div>
+	
+<script type="text/javascript" >
 
+function fn1()
+	{
+		
+		var htp=new XMLHttpRequest();
+		
+		htp.onreadystatechange=function(){
+		
+			if(htp.readyState==4){
+				
+				
+				alert(htp.responseText);
+			}
+		}
+	htp.open("get","http://127.0.0.1:1234/",true);
+	htp.send();
+}
+
+</script>
 				<!-- Main content -->
 				<section class="content">
-
 					<!-- Basic Forms -->
 					<div class="box">
 						<div class="box-header with-border">
-							<h4 class="box-title">View Here</h4>
+							<h4 class="box-title">Record Here</h4>
 							<!-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="#">official website </a></h6> -->
 						</div>
 						<!-- /.box-header -->
@@ -84,31 +103,31 @@
 									<form:form>
 										<div class="row">
 											<div class="col-12">
-												<div class="form-group">
+												<%-- <div class="form-group">
 													<h5>Question</h5>
 													<div class="controls">
 														<form:textarea name="question" id="question" path="" class="form-control" placeholder="Write Description Here"></form:textarea>
 													</div>
-												</div>
+												</div> --%>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-12">
-												<div class="form-group">
+												<%-- <div class="form-group">
 													<h5>Answer</h5>
 													<div class="controls">
 														<form:textarea name="answer" id="answer" path="" class="form-control" placeholder="Write Description Here"></form:textarea>
 													</div>
-												</div>
+												</div> --%>
 											</div>
 										</div>
 										<div class="text-xs-right">
-											<button type="submit" class="btn btn-info">Submit</button>
+											<button class="btn btn-danger" onclick="fn1()">Record</button>
 					  					</div>
 									</form:form>
 								</div>
 							</div>
-						</div>
+						</div>	
 					</div>
 				</section>
 			</div>

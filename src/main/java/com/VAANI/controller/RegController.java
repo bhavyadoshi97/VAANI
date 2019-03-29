@@ -42,8 +42,9 @@ public class RegController
     	@RequestMapping(value="/insertData.html",method=RequestMethod.POST)
     	public ModelAndView insertData(@ModelAttribute RegVO regVO, LoginVO loginVO)
     		{	
+    			String password = this.loginService.createMd5(regVO.getLoginVO().getPassword());
     			loginVO.setUsername(regVO.getLoginVO().getUsername());
-    			loginVO.setPassword(regVO.getLoginVO().getPassword());
+    			loginVO.setPassword(password);
     			loginVO.setEnabled(1);
     			loginVO.setRole("ROLE_USER");
     			this.loginService.loginInsert(loginVO);
