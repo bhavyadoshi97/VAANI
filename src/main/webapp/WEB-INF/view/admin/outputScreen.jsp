@@ -79,11 +79,10 @@ function fn1()
 		
 			if(htp.readyState==4){
 				
-				
 				alert(htp.responseText);
 			}
 		}
-	htp.open("get","http://127.0.0.1:1234/",true);
+	htp.open("get","http://127.0.0.1:1234/ ",true);
 	htp.send();
 }
 
